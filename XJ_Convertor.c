@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
+//fonction de validation de la commande XJ_Convertor [-i xml/json] [-t ][-h url_FluxHTTP] [-f FichierInput] -o nomFichier.svg
 int XJ_Convertor(int argc, char const *argv[])
 {
 	if(strcmp(argv[1],"-i")==0)
