@@ -1,7 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-//fonction de validation de la commande XJ_Convertor [-i xml/json] [-t ][-h url_FluxHTTP] [-f FichierInput] -o nomFichier.svg
+
+//défintion de la fonction de validation de la commande
+
 int XJ_Convertor(int argc, char const *argv[])
 {
 	if(strcmp(argv[1],"-i")==0)
@@ -10,11 +12,13 @@ int XJ_Convertor(int argc, char const *argv[])
 		{
 			if(strcmp(argv[3],"-t")==0)
 			{
-				if(strcmp(argv[4],"-h")==0 || strcmp(argv[4],"-f")==0)
+				if(argc==8)
 				{
-					int x=strlen(argv[5]);
-					if (strcmp(argv[2],"xml")==0 && (argv[5][x-4])=='.' && (argv[5][x-3])=='x' && (argv[5][x-2])=='m' && (argv[5][x-1])=='l' || strcmp(argv[2],"json")==0 && (argv[5][x-5])=='.' && (argv[5][x-4])=='j' && (argv[5][x-3])=='s' && (argv[5][x-2])=='o' && (argv[5][x-1])=='n' )
-					{						
+					if(strcmp(argv[4],"-h")==0 || strcmp(argv[4],"-f")==0)
+					{
+						int x=strlen(argv[5]);
+						if (strcmp(argv[2],"xml")==0 && (argv[5][x-4])=='.' && (argv[5][x-3])=='x' && (argv[5][x-2])=='m' && (argv[5][x-1])=='l' || strcmp(argv[2],"json")==0 && (argv[5][x-5])=='.' && (argv[5][x-4])=='j' && (argv[5][x-3])=='s' && (argv[5][x-2])=='o' && (argv[5][x-1])=='n' )
+						{						
 							if(strcmp(argv[6],"-o")==0)
 							{
 								int y=strlen(argv[7]);
@@ -28,24 +32,28 @@ int XJ_Convertor(int argc, char const *argv[])
 							}
 							else
 								printf("veuiller saisir l'option -o\n");
+						}
+						else
+						{
+							printf("vérifier si le fichier est au bon format sxml ou json et si l'extension est correcte\n");
+						}
 					}
-					else
-					{
-						printf("vérifier si le fichier est au bon format sxml ou json et si l'extension est correcte\n");
-				
-					}
+					else					
+						printf("option saisie incorrecte veuiller saisir l'option -h ou -f\n");	
 				}
-				else					
-					printf("option saisie incorrecte veuiller saisir l'option -h ou -f\n");							
+				else
+					printf("nombre d'arguments incorrect\n");						
 			}						
 			else
 			{
-				if(strcmp(argv[3],"-h")==0 || strcmp(argv[3],"-f")==0)
+				if(argc==7)
 				{
-					int z=strlen(argv[4]);
-					if (strcmp(argv[2],"xml")==0 && (argv[4][z-4])=='.' && (argv[4][z-3])=='x' && (argv[4][z-2])=='m' && (argv[4][z-1])=='l' || strcmp(argv[2],"json")==0 && (argv[4][z-5]=='.') && (argv[4][z-4])=='j' && (argv[4][z-3])=='s' && (argv[4][z-2])=='o' && (argv[4][z-1])=='n' )
-					{	
-						if(strcmp(argv[5],"-o")==0)
+					if(strcmp(argv[3],"-h")==0 || strcmp(argv[3],"-f")==0)
+					{
+						int z=strlen(argv[4]);
+						if (strcmp(argv[2],"xml")==0 && (argv[4][z-4])=='.' && (argv[4][z-3])=='x' && (argv[4][z-2])=='m' && (argv[4][z-1])=='l' || strcmp(argv[2],"json")==0 && (argv[4][z-5]=='.') && (argv[4][z-4])=='j' && (argv[4][z-3])=='s' && (argv[4][z-2])=='o' && (argv[4][z-1])=='n' )
+						{	
+							if(strcmp(argv[5],"-o")==0)
 							{
 								int w=strlen(argv[6]);
 							
@@ -58,12 +66,15 @@ int XJ_Convertor(int argc, char const *argv[])
 							}
 							else
 								printf("veuiller saisir l'option -o\n");
+						}
+						else
+							printf("vérifier si le fichier est au bon format xml ou json et si l'extension est correcte\n");
 					}
 					else
-						printf("vérifier si le fichier est au bon format xml ou json et si l'extension est correcte\n");
+						printf("option saisie incorrecte veuiller saisir l'option -h ou -f\n");
 				}
 				else
-					printf("option saisie incorrecte veuiller saisir l'option -h ou -f\n");
+					printf("nombre d'arguments incorrect\n");
 			}	
 		}
 		else
