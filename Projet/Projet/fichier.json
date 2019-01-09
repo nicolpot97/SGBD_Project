@@ -1,0 +1,16 @@
+
+"$schema": "http://json-schema.org/draft-07/schema#"
+{"Personne":"CNI"[
+  { "NomPersonne":""},
+  { "PrenomPersonne":""},
+  { "Age":""},
+  {"Sexe":""}
+]}
+{"Voiture":"Matricule"[
+  { "Marque":""},
+  { "Couleur":""}
+]}
+{"Acheter": "DateAchat"[
+  { "Personne":""},
+  { "Voiture":""}
+]}
