@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="fichier.xsd">
+<entite>
+	<Personne>
+		<CNI></CNI>
+		<NomPersone></NomPersone>
+		<PrenomPersonne></PrenomPersonne>
+		<Age></Age>
+		<Sexe></Sexe>
+	</Personne>
+	<Voiture>
+		<Matricule></Matricule>
+		<Marque></Marque>
+		<Couleur></Couleur>
+	</Voiture>
+</entite>
+<association>
+	<Acheter>
+		<DateAchat></DateAchat>
+		<CNI></CNI>
+		<Matricule></Matricule>
+	</Acheter>
+</association>
+</diagramme>
