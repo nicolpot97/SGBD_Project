@@ -1,0 +1,18 @@
+{
+  "ecole": {
+    "nom": "ESP",
+    "adresse": {
+      "altitude": 14,
+      "longitude": -17
+    },
+    "Directeur": {
+      "cni": "1256199405286",
+      "nom": "Fall",
+      "prenom": "Alioune",
+      "Age": 25,
+      "Sexe": "M",
+      "adresse": "Gueule Tapée"
+    }
+  }
+
+}
